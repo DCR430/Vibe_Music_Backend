@@ -15,4 +15,5 @@ class FavoritesController < ApplicationController
         Favorite.create(user_id: @user.id, song_id: @song.id) 
         render json: @song 
     end
+
 end

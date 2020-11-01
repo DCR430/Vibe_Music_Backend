@@ -7,7 +7,7 @@ class SongsController < ApplicationController
 
     def show #its for artists top5 songs
         @song = Song.find_by(id: params[:id])
-        url = "https://api.deezer.com/artist/#{params[:id]}/top?limit=50"
+        url = "https://api.deezer.com/artist/#{params[:id]}/top?limit=5"
         response = HTTParty.get(url)
 
         render json: response.parsed_response

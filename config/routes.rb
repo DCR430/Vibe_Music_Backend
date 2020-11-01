@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :favorites
   resources :songs
-  resources :users
   resources :artists
+  resources :favorites
+  resources :users
 
   get '/tracks/:id', to: 'songs#showed'
   delete '/tracks/:id', to: 'songs#destroy'
